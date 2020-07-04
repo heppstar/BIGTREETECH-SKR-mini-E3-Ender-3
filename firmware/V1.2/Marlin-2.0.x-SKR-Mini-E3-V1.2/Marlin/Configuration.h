@@ -484,9 +484,15 @@
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
   // Creality Ender-3
-  #define DEFAULT_Kp 31.13
-  #define DEFAULT_Ki 3.35
-  #define DEFAULT_Kd 72.38
+  //Old
+  //#define DEFAULT_Kp 31.13
+  //#define DEFAULT_Ki 3.35
+  //#define DEFAULT_Kd 72.38
+
+  //New moved nozzel
+  #define DEFAULT_Kp 34.07
+  #define DEFAULT_Ki 3.60
+  #define DEFAULT_Kd 80.56
 
 #endif // PIDTEMP
 
@@ -720,7 +726,7 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 93 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 103 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -1241,7 +1247,7 @@
 #if EITHER(AUTO_BED_LEVELING_LINEAR, AUTO_BED_LEVELING_BILINEAR)
 
   // Set the number of grid points per dimension.
-  #define GRID_MAX_POINTS_X 5 //Tobbe
+  #define GRID_MAX_POINTS_X 4 //Tobbe
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
   // Probe along the Y axis, advancing X after each column
